@@ -4,20 +4,25 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <h1>Your Name</h1>
+        <h1>Andrew Nicholls</h1>
       </header>
       <main>
         <section className="bio">
-          <h2>About Me</h2>
-          <p>
-            Welcome to my personal website! I'm a passionate developer interested in creating amazing web experiences.
-          </p>
+          <img src="/MELO4163.jpg" alt="Andrew Nicholls" />
+          <div>
+            <h2>About Me</h2>
+            <p>
+              Welcome to my personal website! 
+              I'm a sophomore at BYU studying computer science, math, and cybersecurity. 
+              Send me a message on LinkedIn if you want to connect, 
+              or check out my GitHub to see what I'm working on!
+            </p>
+          </div>
         </section>
       </main>
       <footer className="App-footer">
-        <a href="https://github.com" target="_blank" rel="noopener noreferrer">GitHub</a>
-        <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-        <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">Twitter</a>
+        <a href="https://https://github.com/Centerearth" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a href="www.linkedin.com/in/andrew-curtis-nicholls" target="_blank" rel="noopener noreferrer">LinkedIn</a>
       </footer>
     </div>
   );

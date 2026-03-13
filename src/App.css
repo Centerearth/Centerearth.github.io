@@ -9,6 +9,13 @@ body {
 
 .App {
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
 }
 
 .App-header {
@@ -19,6 +26,20 @@ body {
 
 .bio {
   padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.bio img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+}
+
+.bio div {
+  max-width: 500px;
 }
 
 .App-footer {
