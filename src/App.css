@@ -53,3 +53,23 @@ main {
   margin: 0 10px;
   text-decoration: none;
 }
+
+.grid-container {
+    display: grid;
+    /* Defines three columns of equal width using fractional units (fr) */
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px; /* Specifies the gap between columns */
+    padding: 20px;
+}
+
+.grid-item {
+    padding: 10px;
+    border: 1px solid #ccc; /* Optional: adds a border for visibility */
+}
+
+.grid-item img {
+    width: 100%;
+    height: 200px; /* Forces all images to be exactly the same height */
+    object-fit: contain; /* Resizes the image to fit entirely within the box without cropping */
+    object-position: center; /* Centers the image within the new dimensions */
+}
