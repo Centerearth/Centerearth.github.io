@@ -24,13 +24,13 @@ function App() {
           <div className="grid-container">
             <div className="grid-item">
               <h2>FIDO2 Attacks</h2>
-              <p>Implementing a basic site and server supporting FIDO2 passkey authentication so that we can later try to recreate FIDO2 attacks.</p>
+              <p>Implemented a web app supporting FIDO2 passkey authentication, currently trying to recreate FIDO2 attacks.</p>
               <img src="/fido2.png" alt="fido2" />
               <p><a href="https://github.com/Centerearth/FIDO2_attacks" target="_blank" rel="noopener noreferrer">Github</a></p>
             </div>
             <div className="grid-item">
               <h2>RateMyClass</h2>
-              <p>RateMyClass is a RateMyProfessor spinoff tailored for BYU classes.</p>
+              <p>RateMyClass is a RateMyProfessor spinoff tailored for BYU classes. Try it out at <a href="https://ratemyclass.me" target="_blank" rel="noopener noreferrer">ratemyclass.me</a></p>
               <img src="/ratemyclass.png" alt="ratemyclass" />
               <p><a href="https://github.com/Centerearth/startup" target="_blank" rel="noopener noreferrer">Github</a></p>
             </div>
