@@ -8,6 +8,7 @@ import rubiksImg from "./assets/rubiks.png";
 import iinuiImg from "./assets/iinui.png";
 import acmLeadershipImg from "./assets/acm-leadership.JPG";
 import missionImg from "./assets/mission.jpg";
+import iqcImg from "./assets/iqc.jpg";
 
 const projects = [
   {
@@ -121,17 +122,17 @@ function App() {
         <Sidebar />
       </div>
       <main className="flex flex-col gap-8">
-
         <section id="startup">
           <h2 className="mb-4 text-2xl font-bold">Startup</h2>
           <div className="flex flex-col gap-5">
             <FeatureCard image={iinuiImg} imageAlt="Screenshot of the product">
               <p>
                 I am currently taking a break from school to work full-time on a
-                startup called iinui. It is a marketplace for Polynesians (starting
-                with French Polynesia) to list their houses, activities, hotels,
-                etc. The main stack is NextJs, Drizzle + Postgres, hosted on Railway.
-                More to come in the next couple of months!!!
+                startup called iinui. It is a marketplace for Polynesians
+                (starting with French Polynesia) to list their houses,
+                activities, hotels, etc. The main stack is NextJs, Drizzle +
+                Postgres, hosted on Railway. More to come in the next couple of
+                months!!!
               </p>
               <p>
                 <ExternalLink href="https://iinui.com">iinui.com</ExternalLink>
@@ -150,23 +151,30 @@ function App() {
         <section id="leadership">
           <h2 className="mb-4 text-2xl font-bold">Leadership</h2>
           <div className="flex flex-col gap-5">
-            <FeatureCard image={acmLeadershipImg} imageAlt="Picture helping at an event">
+            <FeatureCard
+              image={acmLeadershipImg}
+              imageAlt="Picture helping at an event"
+            >
               <p>
-                I am president of the student chapter of ACM at BYU! We host a variety of 
-                networking and recruitment events for students, including hackathons, recruitment 
-                dinners, Q&A's, workshops, and much more. It has been a blast being able
-                to talk to so many talented and helpful people in the industry and connect them
+                I am president of the student chapter of ACM at BYU! We host a
+                variety of networking and recruitment events for students,
+                including hackathons, recruitment dinners, Q&A's, workshops, and
+                much more. It has been a blast being able to talk to so many
+                talented and helpful people in the industry and connect them
                 with my friends at the universities.
               </p>
               <p>
-                <ExternalLink href="https://acm.byu.edu">acm.byu.edu</ExternalLink>
+                <ExternalLink href="https://acm.byu.edu">
+                  acm.byu.edu
+                </ExternalLink>
               </p>
             </FeatureCard>
             <FeatureCard>
               <p>
-                I serve as one of the program directors for BYU Yserve's Kids Who Code initiative. 
-                We volunteer to provide beginner coding classes to local elementary schools.
-                No photo for privacy reasons.
+                I serve as one of the program directors for BYU Yserve's Kids
+                Who Code initiative. We volunteer to provide beginner coding
+                classes to local elementary schools. No photo for privacy
+                reasons.
               </p>
             </FeatureCard>
           </div>
@@ -176,9 +184,28 @@ function App() {
           <div className="flex flex-col gap-5">
             <FeatureCard image={missionImg} imageAlt="Picture from Tahiti">
               <p>
-                I was blessed to be able to serve as a full-time missionary for the
-                Church of Jesus Christ of Latter-Day Saints for two years on Tahiti
-                and the surrounding islands in French Polynesia!
+                I was blessed to be able to serve as a full-time missionary for
+                the Church of Jesus Christ of Latter-Day Saints for two years on
+                Tahiti and the surrounding islands in French Polynesia!
+              </p>
+            </FeatureCard>
+          </div>
+        </section>
+        <section id="awards">
+          <h2 className="mb-4 text-2xl font-bold">Awards</h2>
+          <div className="flex flex-col gap-5">
+            <FeatureCard image={iqcImg} imageAlt="Picture from ICQ">
+              <p>
+                I won first prize at the Intermountain Quantum Competition in
+                the JustBuild track. My team was
+                charged with creating and advising a fictional client interested in applying
+                quantum approaches to their problem. We
+                decided to recommend that Master Planner, a schedule outsourcing
+                company, pass on implementing Grover's search. We ran
+                several benchmarks using IBM's qiskit library to show that
+                Grover's search did not actually provide a legitimate speed up,
+                and ran noise simulations to show that noise completely drowns
+                the answer.
               </p>
             </FeatureCard>
           </div>
