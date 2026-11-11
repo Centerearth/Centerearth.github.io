@@ -1,4 +1,5 @@
 import profileImg from "./assets/MELO4163.jpg";
+import resumePdf from "./assets/Andrew Nicholls resume.pdf";
 
 const nav = [
   { label: "About", href: "#about" },
@@ -8,7 +9,6 @@ const nav = [
   { label: "Leadership", href: "#leadership" },
   { label: "Mission", href: "#mission" },
   { label: "Awards", href: "#awards" },
-  { label: "Contact", href: "#contact" },
 ];
 
 export default function Sidebar({ active = "#home" }) {
@@ -69,6 +69,14 @@ export default function Sidebar({ active = "#home" }) {
             className="hover:text-neutral-100"
           >
             LinkedIn
+          </a>
+          <a
+            href={resumePdf}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-neutral-100"
+          >
+            Resume
           </a>
         </div>
       </div>

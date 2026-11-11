@@ -9,6 +9,7 @@ import iinuiImg from "./assets/iinui.png";
 import acmLeadershipImg from "./assets/acm-leadership.JPG";
 import missionImg from "./assets/mission.jpg";
 import iqcImg from "./assets/iqc.jpg";
+import resumePdf from "./assets/Andrew Nicholls resume.pdf";
 
 const projects = [
   {
@@ -122,6 +123,49 @@ function App() {
         <Sidebar />
       </div>
       <main className="flex flex-col gap-8">
+        <section id="about">
+          <h2 className="mb-4 text-2xl font-bold">About Me</h2>
+          <div className="flex flex-col gap-5">
+            <FeatureCard>
+              <p>
+                Hi, I'm Andrew! I'm a junior at BYU studying computer science,
+                math, cybersecurity, and French. Right now I'm taking a break
+                from school to build{" "}
+                <a href="#startup" className="underline hover:text-neutral-100">
+                  iinui
+                </a>
+                , a startup I'm working on full-time, and I'm an incoming
+                SWE intern at Lucid.
+              </p>
+              <p>
+                When I'm not coding, you'll find me playing piano, throwing a
+                frisbee, or out on a long walk.
+              </p>
+              <p>
+                I'd love to connect! Reach out on{" "}
+                <ExternalLink
+                  href="https://www.linkedin.com/in/andrew-curtis-nicholls"
+                  className="text-neutral-400 underline hover:text-neutral-100"
+                >
+                  LinkedIn,
+                </ExternalLink>{" "}
+                check out what I'm building on{" "}
+                <ExternalLink
+                  href="https://github.com/Centerearth"
+                  className="text-neutral-400 underline hover:text-neutral-100"
+                >
+                  GitHub,
+                </ExternalLink>
+                {" "}or take a look at my resume <ExternalLink
+                  href={resumePdf}
+                  className="text-neutral-400 underline hover:text-neutral-100"
+                >
+                  here
+                </ExternalLink>.
+              </p>
+            </FeatureCard>
+          </div>
+        </section>
         <section id="startup">
           <h2 className="mb-4 text-2xl font-bold">Startup</h2>
           <div className="flex flex-col gap-5">
@@ -146,6 +190,22 @@ function App() {
             {projects.map((project) => (
               <ProjectCard key={project.title} {...project} />
             ))}
+          </div>
+        </section>
+        <section id="research">
+          <h2 className="mb-4 text-2xl font-bold">Research</h2>
+          <div className="flex flex-col gap-5">
+            <FeatureCard image={fido2Img} imageAlt="Screenshot from research">
+              <p>
+                Conducted a systematic literature review and developed a
+                taxonomy of all FIDO2 attacks currently published, worked on recreating 
+                several of them and am currently writing the paper with the other students.
+                Also diving into security of agentic systems.
+              </p>
+              <ExternalLink href="https://isrl.byu.edu">
+                  isrl.byu.edu
+                </ExternalLink>
+            </FeatureCard>
           </div>
         </section>
         <section id="leadership">
@@ -197,15 +257,14 @@ function App() {
             <FeatureCard image={iqcImg} imageAlt="Picture from ICQ">
               <p>
                 I won first prize at the Intermountain Quantum Competition in
-                the JustBuild track. My team was
-                charged with creating and advising a fictional client interested in applying
-                quantum approaches to their problem. We
-                decided to recommend that Master Planner, a schedule outsourcing
-                company, pass on implementing Grover's search. We ran
-                several benchmarks using IBM's qiskit library to show that
-                Grover's search did not actually provide a legitimate speed up,
-                and ran noise simulations to show that noise completely drowns
-                the answer.
+                the JustBuild track. My team was charged with creating and
+                advising a fictional client interested in applying quantum
+                approaches to their problem. We decided to recommend that Master
+                Planner, a schedule outsourcing company, pass on implementing
+                Grover's search. We ran several benchmarks using IBM's qiskit
+                library to show that Grover's search did not actually provide a
+                legitimate speed up, and ran noise simulations to show that
+                noise completely drowns the answer.
               </p>
             </FeatureCard>
           </div>
