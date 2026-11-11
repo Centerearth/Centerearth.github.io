@@ -1,23 +1,12 @@
-import {
-  House,
-  User,
-  FolderOpen,
-  Rocket,
-  Users,
-  Globe,
-  Trophy,
-  Mail,
-} from "lucide-react";
-
 const nav = [
-  { label: "Home", href: "#home", icon: House },
-  { label: "About", href: "#about", icon: User },
-  { label: "Projects", href: "#projects", icon: FolderOpen },
-  { label: "Startup", href: "#startup", icon: Rocket },
-  { label: "Leadership", href: "#leadership", icon: Users },
-  { label: "Mission", href: "#mission", icon: Globe },
-  { label: "Awards", href: "#awards", icon: Trophy },
-  { label: "Contact", href: "#contact", icon: Mail },
+  { label: "Home", href: "#home" },
+  { label: "About", href: "#about" },
+  { label: "Projects", href: "#projects" },
+  { label: "Startup", href: "#startup" },
+  { label: "Leadership", href: "#leadership" },
+  { label: "Mission", href: "#mission" },
+  { label: "Awards", href: "#awards" },
+  { label: "Contact", href: "#contact" },
 ];
 
 export default function Sidebar({ active = "#home" }) {
@@ -44,20 +33,19 @@ export default function Sidebar({ active = "#home" }) {
 
       {/* Nav */}
       <nav className="flex flex-col gap-1">
-        {nav.map(({ label, href, icon: Icon, child }) => {
+        {nav.map(({ label, href }) => {
           const isActive = href === active;
           return (
             <a
               key={href}
               href={href}
-              className={`flex items-center gap-3 border-l-2 px-3 py-2 text-lg transition-colors
+              className={`block border-l-2 px-3 py-2 text-lg transition-colors
                  ${
                    isActive
                      ? "border-neutral-400 bg-white/5 text-neutral-100"
                      : "border-transparent text-neutral-300 hover:bg-white/5 hover:text-neutral-100"
                  }`}
             >
-              <Icon size={20} strokeWidth={1.5} className="text-neutral-400" />
               {label}
             </a>
           );
