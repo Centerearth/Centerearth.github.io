@@ -15,7 +15,7 @@ const projects = [
   {
     title: "Chess",
     description:
-      "Full-stack chess application. Currently the client is text-based but am working on a website version as well as a chess agent to play against",
+      "Full-stack chess application. I developed two agents to play against, one a tradition adverserial-search agent with a custom heuristic function, and the other was trained with pytorch",
     image: chessImg,
     github: "https://github.com/Centerearth/chess",
   },
@@ -36,14 +36,7 @@ const projects = [
     title: "RateMyClass",
     description: (
       <>
-        RateMyClass is a RateMyProfessor spinoff tailored for BYU classes. Try
-        it out at{" "}
-        <ExternalLink
-          href="https://ratemyclass.me"
-          className="text-neutral-400 underline hover:text-neutral-100"
-        >
-          ratemyclass.me
-        </ExternalLink>
+        RateMyClass is a RateMyProfessor spinoff tailored for BYU classes.
       </>
     ),
     image: ratemyclassImg,
@@ -52,7 +45,7 @@ const projects = [
   {
     title: "FIDO2 Attacks",
     description:
-      "Implemented a web app supporting FIDO2 passkey authentication, successfully recreated several FIDO2 attacks for research.",
+      "A web app supporting FIDO2 passkey authentication, I also successfully recreated several FIDO2 attacks for research.",
     image: fido2Img,
     github: "https://github.com/Centerearth/FIDO2_attacks",
   },
@@ -134,8 +127,8 @@ function App() {
                 <a href="#startup" className="underline hover:text-neutral-100">
                   iinui
                 </a>
-                , a startup I'm working on full-time, and I'm an incoming
-                SWE intern at Lucid.
+                , a startup I'm working on full-time, and I'm an incoming SWE
+                intern at Lucid.
               </p>
               <p>
                 When I'm not coding, you'll find me playing piano, throwing a
@@ -155,13 +148,15 @@ function App() {
                   className="text-neutral-400 underline hover:text-neutral-100"
                 >
                   GitHub,
-                </ExternalLink>
-                {" "}or take a look at my resume <ExternalLink
+                </ExternalLink>{" "}
+                or take a look at my resume{" "}
+                <ExternalLink
                   href={resumePdf}
                   className="text-neutral-400 underline hover:text-neutral-100"
                 >
                   here
-                </ExternalLink>.
+                </ExternalLink>
+                .
               </p>
             </FeatureCard>
           </div>
@@ -198,13 +193,14 @@ function App() {
             <FeatureCard image={fido2Img} imageAlt="Screenshot from research">
               <p>
                 Conducted a systematic literature review and developed a
-                taxonomy of all FIDO2 attacks currently published, worked on recreating 
-                several of them and am currently writing the paper with the other students.
-                Also diving into security of agentic systems.
+                taxonomy of all FIDO2 attacks currently published, worked on
+                recreating several of them and am currently writing the paper
+                with the other students. Also diving into security of agentic
+                systems.
               </p>
               <ExternalLink href="https://isrl.byu.edu">
-                  isrl.byu.edu
-                </ExternalLink>
+                isrl.byu.edu
+              </ExternalLink>
             </FeatureCard>
           </div>
         </section>
