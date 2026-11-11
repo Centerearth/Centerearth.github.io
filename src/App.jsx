@@ -27,7 +27,10 @@ const projects = [
       <>
         RateMyClass is a RateMyProfessor spinoff tailored for BYU classes. Try
         it out at{" "}
-        <ExternalLink href="https://ratemyclass.me" className="text-neutral-400 underline hover:text-neutral-100">
+        <ExternalLink
+          href="https://ratemyclass.me"
+          className="text-neutral-400 underline hover:text-neutral-100"
+        >
           ratemyclass.me
         </ExternalLink>
       </>
@@ -87,6 +90,24 @@ function ProjectCard({ title, description, image, github }) {
   );
 }
 
+function FeatureSection({ id, title, image, imageAlt = "", children }) {
+  return (
+    <section id={id}>
+      <h2 className="mb-4 text-2xl font-bold">{title}</h2>
+      <div className="flex flex-col gap-6 border border-neutral-600 bg-[#222222] p-4 md:flex-row md:items-center">
+        <div className="flex-1 space-y-4">{children}</div>
+        {image && (
+          <img
+            src={image}
+            alt={imageAlt}
+            className="h-[200px] w-full object-contain object-center md:w-2/5"
+          />
+        )}
+      </div>
+    </section>
+  );
+}
+
 function App() {
   return (
     <div className="mx-auto grid min-h-screen max-w-7xl gap-8 p-8 text-neutral-200 antialiased md:grid-cols-[320px_1fr]">
@@ -94,6 +115,24 @@ function App() {
         <Sidebar />
       </div>
       <main className="flex flex-col gap-8">
+        <FeatureSection
+          id="startup"
+          title="Startup"
+          image="/iinui.png"
+          imageAlt="Screenshot of the product"
+        >
+          <p>
+            I am currently taking a break from school to work full-time on a
+            startup called iinui. It is a marketplace for Polynesians (starting
+            with French Polynesia) to list their houses, activities, hotels,
+            etc. The main stack is NextJs, Drizzle + Postgres, hosted on Railway.
+            More to come in the next couple of months!!!
+          </p>
+          <p>
+            <ExternalLink href="https://iinui.com">iinui.com</ExternalLink>
+          </p>
+        </FeatureSection>
+
         <section id="projects">
           <h2 className="mb-4 text-2xl font-bold">Projects</h2>
           <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-2">
