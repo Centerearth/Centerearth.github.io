@@ -1,7 +1,8 @@
 const nav = [
   { label: "About", href: "#about" },
-  { label: "Projects", href: "#projects" },
   { label: "Startup", href: "#startup" },
+  { label: "Projects", href: "#projects" },
+  { label: "Research", href: "#research" },
   { label: "Leadership", href: "#leadership" },
   { label: "Mission", href: "#mission" },
   { label: "Awards", href: "#awards" },

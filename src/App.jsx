@@ -90,21 +90,18 @@ function ProjectCard({ title, description, image, github }) {
   );
 }
 
-function FeatureSection({ id, title, image, imageAlt = "", children }) {
+function FeatureCard({ image, imageAlt = "", children }) {
   return (
-    <section id={id}>
-      <h2 className="mb-4 text-2xl font-bold">{title}</h2>
-      <div className="flex flex-col gap-6 border border-neutral-600 bg-[#222222] p-4 md:flex-row md:items-center">
-        <div className="flex-1 space-y-4">{children}</div>
-        {image && (
-          <img
-            src={image}
-            alt={imageAlt}
-            className="h-[200px] w-full object-contain object-center md:w-2/5"
-          />
-        )}
-      </div>
-    </section>
+    <div className="flex flex-col gap-6 border border-neutral-600 bg-[#222222] p-4 md:flex-row md:items-center">
+      <div className="flex-1 space-y-4">{children}</div>
+      {image && (
+        <img
+          src={image}
+          alt={imageAlt}
+          className="h-[200px] w-full object-contain object-center md:w-2/5"
+        />
+      )}
+    </div>
   );
 }
 
@@ -115,30 +112,54 @@ function App() {
         <Sidebar />
       </div>
       <main className="flex flex-col gap-8">
-        <FeatureSection
-          id="startup"
-          title="Startup"
-          image="/iinui.png"
-          imageAlt="Screenshot of the product"
-        >
-          <p>
-            I am currently taking a break from school to work full-time on a
-            startup called iinui. It is a marketplace for Polynesians (starting
-            with French Polynesia) to list their houses, activities, hotels,
-            etc. The main stack is NextJs, Drizzle + Postgres, hosted on Railway.
-            More to come in the next couple of months!!!
-          </p>
-          <p>
-            <ExternalLink href="https://iinui.com">iinui.com</ExternalLink>
-          </p>
-        </FeatureSection>
 
+        <section id="startup">
+          <h2 className="mb-4 text-2xl font-bold">Startup</h2>
+          <div className="flex flex-col gap-5">
+            <FeatureCard image="/iinui.png" imageAlt="Screenshot of the product">
+              <p>
+                I am currently taking a break from school to work full-time on a
+                startup called iinui. It is a marketplace for Polynesians (starting
+                with French Polynesia) to list their houses, activities, hotels,
+                etc. The main stack is NextJs, Drizzle + Postgres, hosted on Railway.
+                More to come in the next couple of months!!!
+              </p>
+              <p>
+                <ExternalLink href="https://iinui.com">iinui.com</ExternalLink>
+              </p>
+            </FeatureCard>
+          </div>
+        </section>
         <section id="projects">
           <h2 className="mb-4 text-2xl font-bold">Projects</h2>
           <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-2">
             {projects.map((project) => (
               <ProjectCard key={project.title} {...project} />
             ))}
+          </div>
+        </section>
+        <section id="leadership">
+          <h2 className="mb-4 text-2xl font-bold">Leadership</h2>
+          <div className="flex flex-col gap-5">
+            <FeatureCard image="/acm-leadership.JPG" imageAlt="Screenshot of the product">
+              <p>
+                I am president of the student chapter of ACM at BYU! We host a variety of 
+                networking and recruitment events for students, including hackathons, recruitment 
+                dinners, Q&A's, workshops, and much more. It has been a blast being able
+                to talk to so many talented and helpful people in the industry and connect them
+                with my friends at the universities.
+              </p>
+              <p>
+                <ExternalLink href="https://acm.byu.edu">acm.byu.edu</ExternalLink>
+              </p>
+            </FeatureCard>
+            <FeatureCard  imageAlt="Screenshot of the product">
+              <p>
+                I serve as one of the program directors for BYU Yserve's Kids Who Code initiative. 
+                We volunteer to provide beginner coding classes to local elementary schools.
+                No photo for privacy reasons.
+              </p>
+            </FeatureCard>
           </div>
         </section>
       </main>
