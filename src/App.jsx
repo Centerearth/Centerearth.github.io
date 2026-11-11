@@ -1,24 +1,33 @@
 import Sidebar from "./Sidebar";
+import chessImg from "./assets/chess.png";
+import acmImg from "./assets/acm.png";
+import detoxImg from "./assets/detox.png";
+import ratemyclassImg from "./assets/ratemyclass.png";
+import fido2Img from "./assets/fido2.png";
+import rubiksImg from "./assets/rubiks.png";
+import iinuiImg from "./assets/iinui.png";
+import acmLeadershipImg from "./assets/acm-leadership.JPG";
+import missionImg from "./assets/mission.jpg";
 
 const projects = [
   {
     title: "Chess",
     description:
       "Full-stack chess application. Currently the client is text-based but am working on a website version as well as a chess agent to play against",
-    image: "/chess.png",
+    image: chessImg,
     github: "https://github.com/Centerearth/chess",
   },
   {
     title: "BYU ACM Website",
     description:
       "The website for BYU's ACM chapter, deployed in one of BYU's first Kubernetes cluster.",
-    image: "/acm.png",
+    image: acmImg,
   },
   {
     title: "Detox Extension",
     description:
       "A chrome extension that forces users to wait 10 seconds before accessing certain websites.",
-    image: "/detox.png",
+    image: detoxImg,
     github: "https://github.com/Centerearth/detox-extension",
   },
   {
@@ -35,21 +44,21 @@ const projects = [
         </ExternalLink>
       </>
     ),
-    image: "/ratemyclass.png",
+    image: ratemyclassImg,
     github: "https://github.com/Centerearth/startup",
   },
   {
     title: "FIDO2 Attacks",
     description:
       "Implemented a web app supporting FIDO2 passkey authentication, successfully recreated several FIDO2 attacks for research.",
-    image: "/fido2.png",
+    image: fido2Img,
     github: "https://github.com/Centerearth/FIDO2_attacks",
   },
   {
     title: "Rubiks Solver",
     description:
       "A recursive solver for the Rubik's cube implementing a custom bi-directional search.",
-    image: "/rubiks.png",
+    image: rubiksImg,
     github: "https://github.com/Centerearth/rubiks_recursive",
   },
 ];
@@ -116,7 +125,7 @@ function App() {
         <section id="startup">
           <h2 className="mb-4 text-2xl font-bold">Startup</h2>
           <div className="flex flex-col gap-5">
-            <FeatureCard image="/iinui.png" imageAlt="Screenshot of the product">
+            <FeatureCard image={iinuiImg} imageAlt="Screenshot of the product">
               <p>
                 I am currently taking a break from school to work full-time on a
                 startup called iinui. It is a marketplace for Polynesians (starting
@@ -141,7 +150,7 @@ function App() {
         <section id="leadership">
           <h2 className="mb-4 text-2xl font-bold">Leadership</h2>
           <div className="flex flex-col gap-5">
-            <FeatureCard image="/acm-leadership.JPG" imageAlt="Screenshot of the product">
+            <FeatureCard image={acmLeadershipImg} imageAlt="Picture helping at an event">
               <p>
                 I am president of the student chapter of ACM at BYU! We host a variety of 
                 networking and recruitment events for students, including hackathons, recruitment 
@@ -153,11 +162,23 @@ function App() {
                 <ExternalLink href="https://acm.byu.edu">acm.byu.edu</ExternalLink>
               </p>
             </FeatureCard>
-            <FeatureCard  imageAlt="Screenshot of the product">
+            <FeatureCard>
               <p>
                 I serve as one of the program directors for BYU Yserve's Kids Who Code initiative. 
                 We volunteer to provide beginner coding classes to local elementary schools.
                 No photo for privacy reasons.
+              </p>
+            </FeatureCard>
+          </div>
+        </section>
+        <section id="mission">
+          <h2 className="mb-4 text-2xl font-bold">Mission</h2>
+          <div className="flex flex-col gap-5">
+            <FeatureCard image={missionImg} imageAlt="Picture from Tahiti">
+              <p>
+                I was blessed to be able to serve as a full-time missionary for the
+                Church of Jesus Christ of Latter-Day Saints for two years on Tahiti
+                and the surrounding islands in French Polynesia!
               </p>
             </FeatureCard>
           </div>

@@ -1,3 +1,5 @@
+import profileImg from "./assets/MELO4163.jpg";
+
 const nav = [
   { label: "About", href: "#about" },
   { label: "Startup", href: "#startup" },
@@ -19,7 +21,7 @@ export default function Sidebar({ active = "#home" }) {
       {/* Profile */}
       <div className="flex items-center gap-4">
         <img
-          src="/MELO4163.jpg"
+          src={profileImg}
           alt="Andrew Nicholls"
           className="size-20 rounded-full border-2 border-neutral-500 object-cover"
         />
